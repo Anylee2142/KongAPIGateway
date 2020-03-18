@@ -114,4 +114,7 @@ sleep:
 
 one-go: jar docker-build network-create run-app sleep bootstrap run-kong
 
+remove-network:
+	docker network rm kong-net
+
 kong-go: network-create run-db sleep bootstrap run-kong
