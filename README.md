@@ -9,6 +9,19 @@ Gradle 3.1.
     
 ## How to build
 make one-go
+- build jar
+- build docker images
+- build docker network
+- run app server (starbucks) / cassandra
+- run kong
+
+## Kong Steps
+1. Add a Service
+2. Add a Route
+3. Add a Consumer
+4. Add a Key-Auth to the Service
+5. Set a API Key to the Consumer
+6. Execute APIs
 
 ## Test with postman collection at /src/test/java!
 
