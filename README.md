@@ -68,5 +68,5 @@ Gradle 3.1.
 ## How to build
 make one-go
 
-## Test with postman collection!
+## Test with postman collection at /src/test/java!
 - https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
