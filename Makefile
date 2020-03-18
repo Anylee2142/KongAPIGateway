@@ -67,6 +67,12 @@ run-app:
                    -p 9042:9042 \
                    cassandra:3
 
+run-db:
+	docker run -d --name kong-database \
+                   --network=kong-net \
+                   -p 9042:9042 \
+                   cassandra:3
+
 bootstrap:
 	docker run --rm \
 		--network=kong-net \
