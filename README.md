@@ -1,3 +1,6 @@
+## Kong 2.0.2
+- https://docs.konghq.com/2.0.x/getting-started/introduction/
+
 ## Restlet API - Java Standard Edition (JSE) - Version 2.3.5
 
 ## Restlet API Framework  
@@ -66,4 +69,4 @@ Gradle 3.1.
 make one-go
 
 ## Test with postman collection!
-https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
+- https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
