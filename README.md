@@ -1,3 +1,30 @@
+## Kong 2.0.2
+- https://docs.konghq.com/2.0.x/getting-started/introduction/
+- https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
+
+## Pre-requisite
+Docker latest.       
+Java 1.8.       
+Gradle 3.1.       
+    
+## How to build
+make one-go
+- build jar
+- build docker images
+- build docker network
+- run app server (starbucks) / cassandra
+- run kong
+
+## Kong Steps
+1. Add a Service
+2. Add a Route
+3. Add a Consumer
+4. Add a Key-Auth to the Service
+5. Set a API Key to the Consumer
+6. Execute APIs
+
+## Test with postman collection at /src/test/java!
+
 ## Restlet API - Java Standard Edition (JSE) - Version 2.3.5
 
 ## Restlet API Framework  
@@ -55,15 +82,3 @@
     https://en.wikipedia.org/wiki/Digest_access_authentication
     https://restlet.com/technical-resources/restlet-framework/guide/2.3/extensions/oauth
     https://restlet.com/technical-resources/restlet-framework/javadocs/2.3/jse/ext/org/restlet/ext/oauth/package-summary.html 
-
-
-## Pre-requisite
-Docker latest
-Java 1.8
-Gradle 3.1
-    
-## How to build
-make one-go
-
-## Test with postman collection!
-https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
