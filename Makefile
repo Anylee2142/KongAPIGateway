@@ -113,3 +113,5 @@ sleep:
 	sleep 40
 
 one-go: jar docker-build network-create run-app sleep bootstrap run-kong
+
+kong-go: network-create run-db sleep bootstrap run-kong
