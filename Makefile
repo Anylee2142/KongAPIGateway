@@ -60,6 +60,24 @@ network-create:
 network-inspect:
 	docker network inspect kong-net
 
+old-run-app:
+	docker run -d --name starbucks --network kong-net -td starbucks
+	docker run -d --name kong-database --network kong-net -p 9042:9042 cassandra:2.2
+
+old-run-kong:
+	docker run -d --name kong \
+	          --network kong-net \
+              -e "KONG_DATABASE=cassandra" \
+              -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" \
+              -e "KONG_PG_HOST=kong-database" \
+              -p 8000:8000 \
+              -p 8443:8443 \
+              -p 8001:8001 \
+              -p 7946:7946 \
+              -p 7946:7946/udp \
+              kong:0.9.9
+
+
 run-app:
 	docker run -d --name starbucks --network kong-net -td starbucks
 	docker run -d --name kong-database \
@@ -104,7 +122,7 @@ install-curl:
 	apt-get update; apt-get install curl
 	yum install curl
 
-remove:
+remove: remove-network
 	docker rm -f starbucks
 	docker rm -f kong-database
 	docker rm -f kong
@@ -117,4 +135,4 @@ one-go: jar docker-build network-create run-app sleep bootstrap run-kong
 remove-network:
 	docker network rm kong-net
 
-kong-go: network-create run-db sleep bootstrap run-kong
+kong-go:  remove-network network-create run-db sleep bootstrap run-kong
