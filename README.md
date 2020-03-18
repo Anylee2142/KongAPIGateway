@@ -58,9 +58,9 @@
 
 
 ## Pre-requisite
-Docker latest
-Java 1.8
-Gradle 3.1
+Docker latest. 
+Java 1.8. 
+Gradle 3.1. 
     
 ## How to build
 make one-go
