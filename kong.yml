@@ -1,0 +1,56 @@
+# ------------------------------------------------------------------------------
+# This is an example file to get you started with using
+# declarative configuration in Kong.
+# ------------------------------------------------------------------------------
+
+# Metadata fields start with an underscore (_)
+# Fields that do not start with an underscore represent Kong entities and attributes
+
+# _format_version is mandatory,
+# it specifies the minimum version of Kong that supports the format
+
+_format_version: "1.1"
+
+services:
+- name: starbucks
+  url: http://networl-elb-d79d6f839a3261ad.elb.us-west-2.amazonaws.com:8080/v3/starbucks
+  plugins:
+  - name : key-auth
+  routes:
+  - name: starbucksRouted
+    paths:
+    - /starbucks
+    protocols: 
+    - http
+    strip_path: true
+- name: starbucksPing
+  url: http://networl-elb-d79d6f839a3261ad.elb.us-west-2.amazonaws.com:8080/
+  plugins:
+  - name : key-auth
+  routes:
+  - name: starbucksPingRouted
+    paths:
+    - /
+    protocols:
+    - http
+    strip_path: false
+
+consumers:
+- username: apiclient
+  # Custom entities from plugin can also be specified
+  # If they specify a foreign-key relationshp, they can also be nested
+  keyauth_credentials:
+  - key: 20200318A
+  plugins:
+  - name: key-auth
+
+# When an entity has multiple foreign-key relationships
+# (e.g. a plugin matching on both consumer and service)
+# it must be specified as a top-level entity, and not through
+# nesting.
+
+plugins:
+- name: key-auth
+  service: starbucks
+- name: key-auth
+  service: starbucksPing
