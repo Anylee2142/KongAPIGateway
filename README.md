@@ -1,4 +1,4 @@
-## Kong 2.0.2
+## Kong 2.0.2 with cassandra
 - https://docs.konghq.com/2.0.x/getting-started/introduction/
 - https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
 
