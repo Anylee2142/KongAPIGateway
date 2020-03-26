@@ -3,7 +3,9 @@
 - https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
 
 ## Pre-requisite
-Docker latest.       
+Docker latest.      
+Kong 2.0.2
+Cassandra 3.0
 Java 1.8.       
 Gradle 3.1.       
     
