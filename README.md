@@ -1,6 +1,10 @@
 ## Kong 2.0.2 with cassandra
 - https://docs.konghq.com/2.0.x/getting-started/introduction/
 - https://medium.com/@vasista/explaining-kong-plugins-key-authentication-and-rate-limiting-on-flask-api-9f922c4f051
+- This example simulates Backend structures that only Kong API Gateway is exposed
+- Other components are hidden by docker-network
+    - Note that the components are reachable by docker container name
+    - e.g. ping starbucks etc
 
 ## Pre-requisite
 Docker latest     
