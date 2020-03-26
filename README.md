@@ -4,9 +4,9 @@
 
 ## Pre-requisite
 Docker latest.      
-Kong 2.0.2
-Cassandra 3.0
-Java 1.8.       
+Kong 2.0.2           
+Cassandra 3.0           
+Java 1.8.          
 Gradle 3.1.       
     
 ## How to build
