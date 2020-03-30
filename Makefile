@@ -128,7 +128,7 @@ remove: remove-network
 	docker rm -f kong
 
 sleep:
-	sleep 40
+	sleep 20
 
 one-go: jar docker-build network-create run-app sleep bootstrap run-kong
 
