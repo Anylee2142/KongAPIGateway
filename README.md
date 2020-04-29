@@ -5,6 +5,7 @@
 - Other components are hidden by docker-network
     - Note that the components are reachable by docker container name
     - e.g. ping starbucks etc
+- Upgrade from Kong 0.9.9 to 2.0.2
 
 ## Pre-requisite
 Docker latest     
